@@ -1,3 +1,5 @@
 #Consume memory
 ps aux --sort=-%mem | awk 'NR<=10{print $0}'
 
+#Listar diretório com maior armazenamento em disco.
+du -h | egrep -v "\./.+/" | sort -h
